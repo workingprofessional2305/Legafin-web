@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Global box-sizing for layout consistency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 3. Responsive base styles */
+body {
+  @apply text-base text-gray-800 bg-white leading-relaxed;
+  font-family: 'Inter', sans-serif;
+}
+
+/* 4. Images and media responsive by default */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5. Remove default padding/margin */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* 6. Responsive typography for headings */
+h1 {
+  @apply text-3xl sm:text-4xl md:text-5xl font-bold;
+}
+h2 {
+  @apply text-2xl sm:text-3xl md:text-4xl font-semibold;
+}
+h3 {
+  @apply text-xl sm:text-2xl font-semibold;
+}
+
+/* 7. Utility enhancements for form elements */
+input, textarea, button, select {
+  font-family: inherit;
+  @apply focus:outline-none;
+}
